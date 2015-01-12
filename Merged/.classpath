@@ -19,5 +19,15 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/Mohammed/Downloads/jackson-core-2.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mohammed/Downloads/jackson-databind-2.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mohammed/Downloads/jackson-annotations-2.1.2.jar/jackson-annotations-2.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohammed/Downloads/com.fasterxml.jackson.databind.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohammed/.m2/repository/org/mongodb/mongo-java-driver/2.13.0-rc0/mongo-java-driver-2.13.0-rc0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.mongodb"/>
+			<attribute name="maven.artifactId" value="mongo-java-driver"/>
+			<attribute name="maven.version" value="2.13.0-rc0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

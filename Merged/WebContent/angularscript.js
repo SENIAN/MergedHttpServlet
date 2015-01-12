@@ -14,6 +14,7 @@ angular.module('ui.bootstrap.demo').controller('JsonInputBestand', function ($sc
         $http({
         	method: "POST",
         	url: "/Merged/ProcessingRequest.do",
+        	data: $scope.master,
         	headers:{
         	"Content-Type" : "application/x-www-form-urlencoded"}
         	})
