@@ -24,6 +24,8 @@ angular.module('ui.bootstrap.demo').controller('JsonInputBestand', function ($sc
         		
         			})
          };
+         
+       
 
 // Any function returning a promise object can be used to load values asynchronously
     $scope.gpuselected = "";

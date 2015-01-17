@@ -1,3 +1,4 @@
+package servlet;
 
 
 import java.util.ArrayList;
@@ -9,7 +10,9 @@ import org.json.JSONObject;
 
 	public class JSONklass {
 		
-		
+		public void hoi() {
+			System.out.println("neuk");
+		}
 		
 		public ArrayList<String> JSONStringsArrayList = new ArrayList<String>();
 		
@@ -38,6 +41,7 @@ import org.json.JSONObject;
 				
 		//}/
 		
+		
 		public void Start() throws JSONException {
 			jsonMeth();
 		}
@@ -57,7 +61,6 @@ import org.json.JSONObject;
 		public void jsonMeth() throws JSONException {		
 		
 			UserRequest user = new UserRequest();
-			
 			String userInputJSON = user.getParsedJSONString();
 			JSONObject j = new JSONObject(userInputJSON);
 			cpuStringJSONObject = j.optString("cpu");
@@ -126,10 +129,6 @@ import org.json.JSONObject;
 			JSONStringsArrayList.add(soundcardStringJSONObject);
 		}
 			
-		
-
-			
-		
 		
 		//System.out.println(JSONStringsArrayList + "\n");
 		

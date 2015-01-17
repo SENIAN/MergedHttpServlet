@@ -1,13 +1,20 @@
+package servlet;
 
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import servlet.JSONklass;
+
 
 /**
  * Servlet implementation class OutputUser
@@ -23,22 +30,37 @@ public class OutputUser extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public OutputUser() {
+    	
         super();
     }
 
-    
-    JSONklass jsonClassPublic = new JSONklass();
-    
+   JSONklass jsonClassPublic = new JSONklass();
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				
-		
+    
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//RequestDispatcher disp2 = request.getRequestDispatcher("/UserRequest.do"); 
+	
 		PrintWriter out = response.getWriter();
 		
-		out.print(jsonClassPublic.JSONStringsArrayList);
 		
+		HttpSession session2 = request.getSession(true);
+		
+		System.out.println(session2.getAttribute("getArr"));
+		
+		session2.getAttribute("getArr");
+		
+		jsonClassPublic.hoi();
+		
+		
+		//ArrayList<String> hoiaa = new ArrayList<String>();
+		
+		//String getPara = request.getParameter("Save");
+		
+		//hoiaa.add(request.getAttribute("getArr"));
+		//hoiaa.add(getPara);
+		//System.out.println(hoiaa);
 		
 //		try {
 //			jsonClassPublic.Start();
@@ -63,7 +85,7 @@ public class OutputUser extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		doGet(request, response);
 	}
